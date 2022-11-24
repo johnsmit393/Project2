@@ -14,8 +14,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(msg: types.Message):
-    name = msg.from_user.first_name
-    await msg.answer(f"Helo, I am {name}. Enter /help")
+    await msg.answer(f"Hello, Enter /help")
 
 
 @dp.message_handler(commands=['help'])
